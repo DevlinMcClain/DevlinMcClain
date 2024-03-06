@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Bouncing Box</title>
+    <title>Not Bouncing Box</title>
     <script src="jquery.min.js"></script>
     <style>
       .box {
@@ -69,7 +69,8 @@
         var speed = 10;
         var positionY = 0;
         var speedY = 5;
-
+        var randNumX = Math.random() * boardWidth;
+        var randNumY = Math.random() * boardHeight;
         /*
       This Function will be called 20 times/second. Each time it is called,
       it should move the Box to a new location. If the box drifts off the screen
@@ -103,8 +104,8 @@
       the left side of the screen.
       */
         function handleBoxClick() {
-          positionX = 0;
-          positionY = 0;
+          positionX = randNumX;
+          positionY = randNumY;
           points = points + 1;
           if (speed > 0) {
             speed = speed + 3;
@@ -119,7 +120,7 @@
           changeBoxText(points);
         }
       }
-      });
+      })();
     </script>
   </body>
 </html>
