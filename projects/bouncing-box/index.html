@@ -19,7 +19,7 @@
       }
       .board {
         height: 100vh;
-        background-color: black;
+        background-image: url("https://thumbs.dreamstime.com/b/circle-seamless-pattern-repeating-black-dot-white-background-repeated-metaball-wallpaper-abstract-design-tech-prints-modern-270155415.jpg");
       }
     </style>
     <!--  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -104,9 +104,11 @@
       the left side of the screen.
       */
         function handleBoxClick() {
+          points = points + 1;
           positionX = randNumX;
           positionY = randNumY;
-          points = points + 1;
+          changeBoxText(points);
+          
           if (speed > 0) {
             speed = speed + 3;
           } else if (speed < 0) {
@@ -116,8 +118,7 @@
         if (speedY > 0) {
           speedY = speedY + 4;
         } else if (speedY < 0) {
-          speedY = speedY - 4;
-          changeBoxText(points);
+          speedY = speedY - 4
         }
       }
       })();
