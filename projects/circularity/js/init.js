@@ -20,12 +20,12 @@ var init = function (window) {
     var circles = [];
     // TODO 2 : Create a function that draws a circle
    function drawCircle() {circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-    physikz.addRandomVelocity(circle, canvas, 10, 10);
+    physikz.addRandomVelocity(circle, canvas, 100, 100);
     view.addChild(circle);
     circles.push(circle)};
 
     // TODO 3 / 7 : Call the drawCircle() function
-for (var loopsCompleted = 0; loopsCompleted < 1000; loopsCompleted++){drawCircle()}
+for (var loopsCompleted = 0; loopsCompleted < 100000; loopsCompleted++){drawCircle()}
 
     ////////////////////////////////////////////////////////////
     ///////////////// PROGRAM LOGIC ////////////////////////////
